@@ -6,12 +6,14 @@ export EDITOR=nvim
 alias vim="nvim ."
 alias confnvim="nvim /home/mateus/.config/nvim"
 alias confkitty="nvim ~/.config/kitty/kitty.conf"
+alias confawesome="nvim ~/.config/awesome/"
 alias minecraft="java -jar /home/mateus/bin/tlauncher.jar"
 alias bashrc="nvim ~/.bashrc"
 
 set -o vi
 set show-mode-in-prompt on
 
+setxkbmap -layout br
 xmodmap ~/.Xmodmap
 
 # Enable the subsequent settings only in interactive sessions

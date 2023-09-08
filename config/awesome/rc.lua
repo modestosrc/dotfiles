@@ -52,7 +52,7 @@ awful.spawn.once("polybar")
 autorun = true
 autorunApps = {
     --"xset m 0 0",
-   " xinput --set-prop 14 'libinput Accel Profile Enabled' 0, 1",
+    "xinput --set-prop 14 'libinput Accel Profile Enabled' 0, 1",
 }
 
 if autorun then
@@ -236,11 +236,11 @@ end)
 -- }}}
 
 -- {{{ Mouse bindings
-root.buttons(gears.table.join(
-    awful.button({ }, 3, function () mymainmenu:toggle() end),
-    awful.button({ }, 4, awful.tag.viewnext),
-    awful.button({ }, 5, awful.tag.viewprev)
-))
+-- root.buttons(gears.table.join(
+--     awful.button({ }, 3, function () mymainmenu:toggle() end),
+--     awful.button({ }, 4, awful.tag.viewnext),
+--     awful.button({ }, 5, awful.tag.viewprev)
+-- ))
 -- }}}
 
 -- {{{ Key bindings
@@ -330,8 +330,14 @@ globalkeys = gears.table.join(
     -- awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
     --          {description = "run prompt", group = "launcher"}),
 
-    awful.key({ modkey }, "r", function () awful.util.spawn("rofi -show drun") end,
+    awful.key({ modkey }, "r", function () awful.util.spawn("rofi -modes \"drun,window\" -show drun") end,
           {description = "open rofi", group = "launcher"}),
+
+    awful.key({ modkey }, "Tab", function () awful.util.spawn("rofi -modes \"window\" -show window") end,
+          {description = "open rofi", group = "launcher"}),
+
+    awful.key({ modkey }, "BackSpace", function () awful.spawn("rofi -show power-menu -modi power-menu:~/bin/rofi-power-menu") end,
+          {description = "Show Power Menu", group = "custom"}),
 
     awful.key({ modkey }, "x",
               function ()

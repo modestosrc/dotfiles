@@ -1,1 +1,2 @@
-keycode 47 = apostrophe quotedbl dead_acute dead_diaeresis
+keycode 47 = apostrophe quotedbl
+keycode 66 = NoSymbol

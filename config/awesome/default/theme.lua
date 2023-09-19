@@ -11,24 +11,24 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "FiraCode"
+theme.font          = "InconsolataLGC"
 
-theme.bg_normal     = "#282a36"
-theme.bg_focus      = "#44475a"
-theme.bg_urgent     = "#ff5555"
-theme.bg_minimize   = "#44475a"
+theme.bg_normal     = "#303446"
+theme.bg_focus      = "#414559"
+theme.bg_urgent     = "#e78284"
+theme.bg_minimize   = "#51576d"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#ffffff"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.fg_normal     = "#ca9ee6"
+theme.fg_focus      = "#ca9ee6"
+theme.fg_urgent     = "#ca9ee6"
+theme.fg_minimize   = "#ca9ee6"
 
 theme.useless_gap   = dpi(5)
 theme.border_width  = dpi(1)
-theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
-theme.border_marked = "#91231c"
+theme.border_normal = "#303446"
+theme.border_focus  = "#51576d"
+theme.border_marked = "#babbf1"
 
 -- There are other variable sets
 -- overriding the default one when
@@ -97,7 +97,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/mateus/.config/awesome/default/wallpapers/void.png"
+theme.wallpaper = "/home/mateus/.config/awesome/default/wallpapers/result.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

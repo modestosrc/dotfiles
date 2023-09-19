@@ -3,6 +3,7 @@ export PATH="$PATH:/opt/texlive/2023/tlpkg/TeXLive/"
 export JAVA_HOME=/usr
 export EDITOR=nvim
 
+alias mixer="pulsemixer"
 alias vim="nvim ."
 alias confnvim="nvim /home/mateus/.config/nvim"
 alias confkitty="nvim ~/.config/kitty/kitty.conf"
@@ -15,6 +16,12 @@ set show-mode-in-prompt on
 
 setxkbmap -layout br
 xmodmap ~/.Xmodmap
+
+function lk {
+    cd "$(walk "$@" --icons)"
+}
+
+OMB_PROMPT_SHOW_PYTHON_VENV=true
 
 # Enable the subsequent settings only in interactive sessions
 case $- in
@@ -120,6 +127,7 @@ plugins=(
   git
   bashmarks
   zoxide
+  tmux-autoattach
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
@@ -166,3 +174,9 @@ PERL5LIB="/home/mateus/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LI
 PERL_LOCAL_LIB_ROOT="/home/mateus/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/mateus/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/mateus/perl5"; export PERL_MM_OPT;
+
+pfetch
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH

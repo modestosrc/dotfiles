@@ -2,6 +2,16 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
 
+    use {
+        "startup-nvim/startup.nvim",
+        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+        config = function()
+            require"startup".setup()
+        end
+    }
+
+    use {'CRAG666/code_runner.nvim'}
+
     use {'folke/lsp-colors.nvim'}
 
     use {'nvim-tree/nvim-web-devicons'}

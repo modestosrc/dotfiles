@@ -8,3 +8,4 @@ vim.api.nvim_set_keymap('n', '<leader>l', '<C-w>l', { noremap = true, silent = t
 vim.api.nvim_set_keymap('n', '<leader>v', '<C-w>v', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>c', ':split<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>q', ':close<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })

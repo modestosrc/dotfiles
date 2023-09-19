@@ -2,7 +2,7 @@ require("mateus.set")
 require("mateus.remap")
 require("mateus.packer")
 
-vim.cmd.colorscheme "dracula"
+vim.cmd.colorscheme "catppuccin-frappe"
 vim.cmd('set guifont=FiraCode:h12')
 vim.opt.guicursor = {
     'n-v:hor20',

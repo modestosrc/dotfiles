@@ -1,69 +1,64 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-
     use {
         "startup-nvim/startup.nvim",
-        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
         config = function()
-            require"startup".setup()
+            require "startup".setup()
         end
     }
 
-    use {'CRAG666/code_runner.nvim'}
+    use { 'danilo-augusto/vim-afterglow' }
 
-    use {'folke/lsp-colors.nvim'}
+    use { 'RRethy/base16-nvim' }
 
-    use {'nvim-tree/nvim-web-devicons'}
+    use { 'CRAG666/code_runner.nvim' }
 
-    use {'lukas-reineke/indent-blankline.nvim'}
+    use { 'folke/lsp-colors.nvim' }
 
-    use {'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
+    use { 'nvim-tree/nvim-web-devicons' }
 
-    use {'wbthomason/packer.nvim'}
+    use { 'lukas-reineke/indent-blankline.nvim' }
 
-    use {'nvim-telescope/telescope.nvim', tag = '0.1.1',
-        requires = { {'nvim-lua/plenary.nvim'}}}
+    use { 'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+        after = 'base16-nvim' }
 
-    use {'maxmx03/dracula.nvim'}
+    use { 'wbthomason/packer.nvim' }
 
-    use {'olimorris/onedarkpro.nvim'}
+    use { 'nvim-telescope/telescope.nvim', tag = '0.1.5',
+        requires = { { 'nvim-lua/plenary.nvim' } } }
 
-    use {'catppuccin/nvim', as = 'catppuccin' }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-    use {'marko-cerovac/material.nvim'}
+    use { 'theprimeagen/harpoon' }
 
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use { 'mbbill/undotree' }
 
-    use {'theprimeagen/harpoon'}
+    use { 'williamboman/mason.nvim',
+        run = ":MasonUpdate" }
 
-    use {'mbbill/undotree'}
+    use { 'folke/trouble.nvim',
+        requires = { { 'nvim-tree/nvim-web-devicons' } } }
 
-    use {'williamboman/mason.nvim',
-    run = ":MasonUpdate"}
+    use { 'tpope/vim-fugitive' }
 
-    use {'folke/trouble.nvim',
-    requires = {{'nvim-tree/nvim-web-devicons'}}}
+    use { "folke/todo-comments.nvim",
+        requires = { { "nvim-lua/plenary.nvim" } },
+        opts = {} }
 
-    use { 'tpope/vim-fugitive'}
-
-    use {"folke/todo-comments.nvim",
-    requires = {{ "nvim-lua/plenary.nvim" }},
-    opts = {}}
-
-    use {'VonHeikemen/lsp-zero.nvim',
-    branch = 'v2.x',
-    requires = {
-        {'neovim/nvim-lspconfig'},
-        {'williamboman/mason.nvim',
-        run = function()
-            pcall(vim.cmd, 'MasonUpdate')
-        end,
-        },
-        {'williamboman/mason-lspconfig.nvim'},
-        {'hrsh7th/nvim-cmp'},
-        {'hrsh7th/cmp-nvim-lsp'},
-        {'L3MON4D3/LuaSnip'}}}
-
+    use { 'VonHeikemen/lsp-zero.nvim',
+        branch = 'v2.x',
+        requires = {
+            { 'neovim/nvim-lspconfig' },
+            { 'williamboman/mason.nvim',
+                run = function()
+                    pcall(vim.cmd, 'MasonUpdate')
+                end,
+            },
+            { 'williamboman/mason-lspconfig.nvim' },
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'L3MON4D3/LuaSnip' } } }
 end)

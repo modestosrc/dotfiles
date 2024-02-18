@@ -79,10 +79,10 @@ _G.packer_plugins = {
     path = "/home/mateus/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  catppuccin = {
+  ["base16-nvim"] = {
     loaded = true,
-    path = "/home/mateus/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
+    path = "/home/mateus/.local/share/nvim/site/pack/packer/start/base16-nvim",
+    url = "https://github.com/RRethy/base16-nvim"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
@@ -93,11 +93,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mateus/.local/share/nvim/site/pack/packer/start/code_runner.nvim",
     url = "https://github.com/CRAG666/code_runner.nvim"
-  },
-  ["dracula.nvim"] = {
-    loaded = true,
-    path = "/home/mateus/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/maxmx03/dracula.nvim"
   },
   harpoon = {
     loaded = true,
@@ -120,8 +115,10 @@ _G.packer_plugins = {
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["lualine.nvim"] = {
+    load_after = {},
     loaded = true,
-    path = "/home/mateus/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    needs_bufread = false,
+    path = "/home/mateus/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
@@ -133,11 +130,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mateus/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["material.nvim"] = {
-    loaded = true,
-    path = "/home/mateus/.local/share/nvim/site/pack/packer/start/material.nvim",
-    url = "https://github.com/marko-cerovac/material.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -158,11 +150,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mateus/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
-  },
-  ["onedarkpro.nvim"] = {
-    loaded = true,
-    path = "/home/mateus/.local/share/nvim/site/pack/packer/start/onedarkpro.nvim",
-    url = "https://github.com/olimorris/onedarkpro.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -200,6 +187,11 @@ _G.packer_plugins = {
     path = "/home/mateus/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-afterglow"] = {
+    loaded = true,
+    path = "/home/mateus/.local/share/nvim/site/pack/packer/start/vim-afterglow",
+    url = "https://github.com/danilo-augusto/vim-afterglow"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/mateus/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -212,6 +204,11 @@ time([[Defining packer_plugins]], false)
 time([[Config for startup.nvim]], true)
 try_loadstring("\27LJ\2\0025\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fstartup\frequire\0", "config", "startup.nvim")
 time([[Config for startup.nvim]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd base16-nvim ]]
+vim.cmd [[ packadd lualine.nvim ]]
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

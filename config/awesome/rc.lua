@@ -11,6 +11,8 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 require("awful.hotkeys_popup.keys")
 local common = require("awful.widget.common")
 
+local show_hide_state = "show"
+
 if awesome.startup_errors then
     naughty.notify({
         preset = naughty.config.presets.critical,
@@ -45,7 +47,7 @@ awful.spawn.once("polybar")
 autorun = true
 autorunApps = {
     --"xset m 0 0",
-    "xinput --set-prop 14 'libinput Accel Profile Enabled' 0, 1",
+    "xinput --set-prop 9 'libinput Accel Profile Enabled' 0, 1",
     "setxkbmap -layout br",
     "xmodmap ~/.Xmodmap",
 }
@@ -479,7 +481,20 @@ globalkeys = gears.table.join(
         { description = "show the menubar", group = "launcher" })
 )
 
+
 clientkeys = gears.table.join(
+    awful.key({ modkey, "Control" }, "h", function ()
+        if show_hide_state == "show" then
+            -- Se o último comando foi "pshow", execute "phide"
+            awful.spawn.with_shell("zsh -i -c 'phide'")
+            show_hide_state = "hide"
+        else
+            -- Se o último comando foi "phide", execute "pshow"
+            awful.spawn.with_shell("zsh -i -c 'pshow'")
+            show_hide_state = "show"
+        end
+    end),
+
     awful.key({ modkey, }, "f",
         function(c)
             c.fullscreen = not c.fullscreen
@@ -765,9 +780,9 @@ client.connect_signal("request::titlebars", function(c)
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
--- client.connect_signal("mouse::enter", function(c)
--- c:emit_signal("request::activate", "mouse_enter", {raise = false})
--- end)
+client.connect_signal("mouse::enter", function(c)
+    c:emit_signal("request::activate", "mouse_enter", {raise = false})
+end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)

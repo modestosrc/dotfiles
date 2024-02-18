@@ -13,21 +13,21 @@ local theme = {}
 
 theme.font          = "InconsolataLGC"
 
-theme.bg_normal     = "#303446"
-theme.bg_focus      = "#414559"
-theme.bg_urgent     = "#e78284"
-theme.bg_minimize   = "#51576d"
+theme.bg_normal     = "#222222"  -- Background
+theme.bg_focus      = "#151515"  -- Black (Host)
+theme.bg_urgent     = "#A53C23"  -- Red (Syntax string)
+theme.bg_minimize   = "#7B9246"  -- Green (Command)
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#ca9ee6"
-theme.fg_focus      = "#ca9ee6"
-theme.fg_urgent     = "#ca9ee6"
-theme.fg_minimize   = "#ca9ee6"
+theme.fg_normal     = "#D0D0D0"  -- Foreground (Text)
+theme.fg_focus      = "#D0D0D0"  -- Foreground (Text)
+theme.fg_urgent     = "#D0D0D0"  -- Foreground (Text)
+theme.fg_minimize   = "#D0D0D0"  -- Foreground (Text)
 
-theme.useless_gap   = dpi(5)
+theme.useless_gap   = dpi(8)
 theme.border_width  = dpi(1)
-theme.border_normal = "#303446"
-theme.border_focus  = "#51576d"
+theme.border_normal = "#151515"
+theme.border_focus  = "#D3A04D"
 theme.border_marked = "#babbf1"
 
 -- There are other variable sets
@@ -97,7 +97,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/mateus/.config/awesome/default/wallpapers/result.png"
+theme.wallpaper = "/home/mateus/.config/awesome/default/wallpapers/28.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

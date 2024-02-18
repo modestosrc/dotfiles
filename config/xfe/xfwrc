@@ -1,3 +1,18 @@
+[FILEDIALOG]
+type_size=100
+hiddenfiles=1
+width=640
+attr_size=100
+user_size=50
+height=480
+ext_size=100
+grou_size=50
+liststyle=8388608
+modd_size=150
+showthumbnails=0
+name_size=200
+size_size=60
+
 [SearchReplace]
 RB=
 SB=46b48281-eb6d-663c-ed74-8f324108c733
@@ -11,24 +26,24 @@ MB=5
 
 [OPTIONS]
 textnumberforeground=#f8f8f2
-width=1263
-textfont=Sans,100,normal,regular
+width=934
+textfont=FiraCode Nerd Font Mono [CTDB],100,normal,regular
 tabcols=8
-linesnum=0
+linesnum=1
 textnumberbackground=#282a36
 hilitematchtime=3000
 hidestatus=0
 wordwrap=0
-height=994
+height=993
 textforeground=#f8f8f2
 textselbackground=#bd93f9
-ypos=-105
+ypos=41
 textcursor=#f8f8f2
 searchpath=
 texthilitebackground=#ff8080
 wrapcols=80
 hidetoolbar=0
-xpos=1286
+xpos=17
 stripreturn=0
 textbackground=#282a36
 texthiliteforeground=#f8f8f2
@@ -36,18 +51,16 @@ textselforeground=#f8f8f2
 
 [SETTINGS]
 tippause=500
-basecolor=#44475a
+basecolor=#343434
 tiptime=10000
 
 [Recent Files]
-FILE6=/home/mateus/fast_pb_da/projeto-i/postgres_db/create_tables.sql
-FILE7=/home/mateus/.local/share/DBeaverData/workspace6/General/Scripts/projeto-i.sql
-FILE4=/home/mateus/.gitconfig
-FILE5=/home/mateus/fast_pb_da/projeto-i/input/olist_products_dataset.csv
-FILE2=/home/mateus/.osh-update
-FILE3=/home/mateus/git/dotfiles/home/.Xresources
-FILE10=/home/mateus/fast_pb_da/projeto-i/input/olist_order_payments_dataset.csv
-FILE1=/home/mateus/.inputrc
-FILE8=/home/mateus/fast_pb_da/projeto-i/input/olist_order_items_dataset.csv
-FILE9=/home/mateus/fast_pb_da/projeto-i/input/olist_orders_dataset.csv
+FILE6=/home/mateus/fast_pb_da/projeto-i/python_etl/input/olist_orders_dataset.csv
+FILE7=/home/mateus/fast_pb_da/projeto-i/python_etl/input/olist_order_items_dataset.csv
+FILE4=/home/mateus/Imagens/m2vqxi32ahva1.webp
+FILE5=/home/mateus/.fonts/Times New Roman/times new roman.ttf
+FILE2=/home/mateus/.cache/locate.cache
+FILE3=/home/mateus/Downloads/OF-.Swap.Boat.Sex.Scene-CSX0Fjzu.mp4
+FILE1=/home/mateus/src/ocaml/ocaml advent of code 2022/advent_of_code/bin/dune
+FILE8=/home/mateus/fast_pb_da/projeto-i/python_etl/input/olist_order_payments_dataset.csv
 

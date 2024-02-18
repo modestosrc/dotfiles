@@ -1,3 +1,4 @@
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>t", ":terminal<CR>i ")
@@ -9,3 +10,4 @@ vim.api.nvim_set_keymap('n', '<leader>v', '<C-w>v', { noremap = true, silent = t
 vim.api.nvim_set_keymap('n', '<leader>c', ':split<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>q', ':close<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })
+vim.keymap.set('n', '<leader>p', ':RunProject<CR>', { noremap = true, silent = false })

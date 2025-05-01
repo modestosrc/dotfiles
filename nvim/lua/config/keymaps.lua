@@ -6,6 +6,7 @@ vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = tru
 vim.keymap.set("n", "<F3>", "<cmd>lua vim.lsp.buf.format()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "J", "<cmd> lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "K", "<cmd>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", { noremap = true, silent = true })
 
 -- UndoTree
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>", { noremap = true, silent = true })
@@ -22,31 +23,31 @@ vim.keymap.set("n", "<leader>q", "<C-w>c", { noremap = true, silent = true })
 
 -- Harpoon
 vim.keymap.set("n", "<leader>a", function()
-  require("harpoon.mark").add_file()
+    require("harpoon.mark").add_file()
 end, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>e", function()
-  require("harpoon.ui").toggle_quick_menu()
+    require("harpoon.ui").toggle_quick_menu()
 end, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>1", function()
-  require("harpoon.ui").nav_file(1)
+    require("harpoon.ui").nav_file(1)
 end, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>2", function()
-  require("harpoon.ui").nav_file(2)
+    require("harpoon.ui").nav_file(2)
 end, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>3", function()
-  require("harpoon.ui").nav_file(3)
+    require("harpoon.ui").nav_file(3)
 end, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>4", function()
-  require("harpoon.ui").nav_file(4)
+    require("harpoon.ui").nav_file(4)
 end, { noremap = true, silent = true })
 
 -- Telescope
 vim.keymap.set("n", "<leader>f", function()
-  require("telescope.builtin").find_files()
+    require("telescope.builtin").find_files()
 end, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>s", function()
-  require("telescope.builtin").live_grep()
+    require("telescope.builtin").live_grep()
 end, { noremap = true, silent = true })
 
 -- Oil
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", {desc = "Open parent directory"})
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

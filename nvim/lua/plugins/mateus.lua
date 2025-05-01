@@ -37,7 +37,7 @@ return {
                 auto_trigger = true,
                 hide_during_completion = vim.g.ai_cmp,
                 keymap = {
-                    accept = "<A-i>",
+                    accept = "<C-i>",
                 },
             },
             panel = { enabled = false },
@@ -245,10 +245,10 @@ return {
                     end,
                 },
                 mapping = cmp.mapping.preset.insert({
-                    ['<A-p>'] = cmp.mapping.select_prev_item(cmp_select),
-                    ['<A-n>'] = cmp.mapping.select_next_item(cmp_select),
-                    ['<A-y>'] = cmp.mapping.confirm({ select = true }),
-                    ["<A-Space>"] = cmp.mapping.complete(),
+                    ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+                    ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+                    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+                    ["<C-Space>"] = cmp.mapping.complete(),
                 }),
                 sources = cmp.config.sources({
                     { name = "copilot", group_index = 2 },

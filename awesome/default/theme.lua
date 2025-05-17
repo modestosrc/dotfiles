@@ -24,8 +24,8 @@ theme.fg_focus      = "#f8f8f2"  -- Foreground (Text)
 theme.fg_urgent     = "#f8f8f2"  -- Foreground (Text)
 theme.fg_minimize   = "#f8f8f2"  -- Foreground (Text)
 
-theme.useless_gap   = dpi(2)
-theme.border_width  = dpi(1)
+theme.useless_gap   = dpi(1)
+theme.border_width  = dpi(0)
 theme.border_normal = "#282a36"
 theme.border_focus  = "#bd93f9"
 theme.border_marked = "#bd93f9"
@@ -97,7 +97,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/mateus/.config/awesome/default/wallpapers/1722922005366516.jpg"
+theme.wallpaper = "/home/mateus/.config/awesome/default/wallpapers/arch.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

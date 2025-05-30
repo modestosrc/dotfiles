@@ -188,6 +188,7 @@ return {
             require("mason").setup()
             require("mason-lspconfig").setup({
                 ensure_installed = {
+                    "phpactor",
                     "lua_ls",
                     "rust_analyzer",
                     "gopls",
@@ -229,7 +230,7 @@ return {
                                             indent_size = "2",
                                         }
                                     },
-                                }
+                                },
                             }
                         }
                     end,
@@ -288,4 +289,14 @@ return {
     {
         "tpope/vim-fugitive",
     },
+
+    {
+        "NeogitOrg/neogit",
+        dependencies = {
+            "nvim-lua/plenary.nvim", -- required
+            "sindrets/diffview.nvim", -- optional - Diff integration
+
+            "nvim-telescope/telescope.nvim", -- optional
+        },
+    }
 }

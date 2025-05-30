@@ -13,6 +13,7 @@ vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", { noremap = tru
 vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>",
     { noremap = true, silent = true })
 vim.keymap.set("n", "<F4", "<cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "J", "<cmd>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
 
 -- UndoTree
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>", { noremap = true, silent = true })
@@ -57,3 +58,6 @@ end, { noremap = true, silent = true })
 
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- Neogit
+vim.keymap.set("n", "<leader>g", "<cmd>Neogit<CR>", { noremap = true, silent = true })

@@ -199,9 +199,10 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create the wibox
     s.mywibox = awful.wibar({
-        position = "bottom",
-        height = 25,
-        screen = s
+        visible = false,
+        position   = "bottom",
+        height     = 25,
+        screen     = s,
     })
 
     -- Create the taglist
@@ -311,15 +312,16 @@ globalkeys = gears.table.join(
     awful.key({ modkey, }, "Escape", awful.tag.history.restore,
         { description = "go back", group = "tag" }),
 
-    awful.key({}, "XF86AudioRaiseVolume", function()
-            awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +1%")
-        end,
-        { description = "Aumentar volume", group = "Volume" }),
+    -- Volume control
+    -- awful.key({}, "XF86AudioRaiseVolume", function()
+    --         awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +1%")
+    --     end,
+    --     { description = "Aumentar volume", group = "Volume" }),
 
-    awful.key({}, "XF86AudioLowerVolume", function()
-            awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -1%")
-        end,
-        { description = "Diminuir volume", group = "Volume" }),
+    -- awful.key({}, "XF86AudioLowerVolume", function()
+    --         awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -1%")
+    --     end,
+    --     { description = "Diminuir volume", group = "Volume" }),
 
     awful.key({ modkey, }, "j",
         function()
@@ -333,6 +335,13 @@ globalkeys = gears.table.join(
         end,
         { description = "focus previous by index", group = "client" }
     ),
+    awful.key({ modkey }, "b",
+          function ()
+              myscreen = awful.screen.focused()
+              myscreen.mywibox.visible = not myscreen.mywibox.visible
+          end,
+          {description = "toggle statusbar"}
+),
     -- awful.key({ modkey, }, "w", function() main_menu:show() end,
     -- { description = "show main menu", group = "awesome" }),
 
